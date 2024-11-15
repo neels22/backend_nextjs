@@ -110,7 +110,7 @@ export const DELETE = async (request: Request) => {
     const { searchParams } = new URL(request.url);
     const userid = searchParams.get("userid");
 
-    // check if data is exist
+    // check if data is exist in params
     if (!userid) {
       return new NextResponse("ID not found", {
         status: 400,
